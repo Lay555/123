@@ -1,0 +1,141 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.mob.sdk'
+MobSDK {
+    appKey " 2913cd46b02a2"
+    appSecret "2fd4e72ca14540fb61d40eba435d510c"
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wx8179ac04473e44c0"
+                appSecret "1297ae3596fd76291ae5b932cc9a71f9"
+            }
+            WechatMoments {
+                appId "wx8179ac04473e44c0"
+                appSecret "1297ae3596fd76291ae5b932cc9a71f9"
+            }
+        }
+    }
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'sjcazldl'
+            storeFile file('../rongegou.jks')
+            storePassword 'sjcazldl'
+        }
+        debug {
+            storeFile file('D:\\project\\RongEGou\\RongEGou\\rongegou.jks')
+            storePassword 'sjcazldl'
+            keyAlias = 'key0'
+            keyPassword 'sjcazldl'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.doudui.rongegou"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 21
+        versionName "2.6.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        //信鸽
+        manifestPlaceholders = [
+                XG_ACCESS_ID : "2100321270",
+                XG_ACCESS_KEY: "AZC96KQ85E7S",
+                PACKAGE_NAME : "com.doudui.rongegou",
+                HW_APPID     : "100568371"
+        ]
+
+    }
+    buildTypes {
+        release {
+
+            buildConfigField("String","BASEURL","\"https://api.rongegou.net\"")
+            buildConfigField("String","BASEURLFX","\"https://reg.rongegou.net\"")
+
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+
+            buildConfigField("String","BASEURL","\"http://csapi.rongegou.net\"")
+            buildConfigField("String","BASEURLFX","\"http://csreg.rongegou.net\"")
+
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    //解决了smart刷新在xml与recycleview一起不能显示问题
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //SmartRefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.jakewharton:butterknife:8.5.0'
+    implementation 'com.jakewharton:butterknife-compiler:8.5.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //
+    //ConverterFactory的Gson依赖包
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    //ConverterFactory的String依赖包
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'com.jph.takephoto:takephoto_library:4.0.3'
+    //    图片压缩
+    implementation 'top.zibin:Luban:1.1.8'
+    //权限管理
+    implementation 'com.github.dfqin:grantor:2.1.0'
+    implementation project(':magicindicator')
+    implementation files('libs/wechat-sdk-android-with-mta-1.0.2.jar')
+    implementation 'com.nex3z:flow-layout:0.1.4'
+    implementation(name: 'alipaySdk-15.5.7-20181023110917', ext: 'aar')
+    //信鸽jar
+    implementation 'com.tencent.xinge:xinge:3.2.7-Release'
+    //jg包
+    implementation 'com.tencent.jg:jg:1.1'
+    //wup包
+    implementation 'com.tencent.wup:wup:1.0.0.E-release'
+    //mid包
+    implementation 'com.tencent.mid:mid:4.0.6-release'
+    implementation 'com.tencent.xinge:xgmz:3.2.7-release'
+    implementation 'com.tencent.xinge:mipush:3.2.7-release'
+    implementation 'com.tencent.xinge:xghw:3.2.7-release'
+    //状态栏
+    implementation 'com.gyf.immersionbar:immersionbar:2.3.3-beta15'
+    implementation 'com.umeng.umsdk:analytics:7.5.4'
+    implementation 'com.umeng.umsdk:common:1.5.4'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+}

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="151dp"
+                android:background="@mipmap/grxsh_bj"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="嵘e购个人销售额展示"
+                    android:textColor="@color/bai"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="个人日销"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_terx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@mipmap/xuxian" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="个人月销"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_teyx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@mipmap/xuxian" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="个人总额"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_teze"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="151dp"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/tdxsh_bj"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="嵘e购团队销售额展示"
+                    android:textColor="@color/bai"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="团队总日销"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_tetdrx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@mipmap/xuxian" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="团队月销"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_tetdyx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@mipmap/xuxian" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="团队总额"
+                            android:textColor="#7c7c7c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/prxse_tetdze"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|top"
+                            android:textColor="@color/hei"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/shuxian1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="// "
+                    android:textColor="@color/hei"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="更多内容"
+                    android:textColor="@color/hei"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text=" //"
+                    android:textColor="@color/hei"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/dyph_bj">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginBottom="9dp"
+                        android:src="@mipmap/dyph_icon" />
+
+
+                    <TextView
+                        android:id="@+id/per_tepm"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="46dp"
+                        android:layout_marginTop="11dp"
+                        android:gravity="center"
+                        android:text="未进入前500"
+                        android:textColor="@color/danhei"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/per_tepm"
+                        android:layout_marginLeft="46dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="当前月销排名"
+                        android:textColor="@color/hei333"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/xuxian1" />
+
+                    <TextView
+                        android:id="@+id/perxse_tepm1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="61dp"
+                        android:text="第500名销售额为522元"
+                        android:textColor="@color/bai"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/lxsany_bj1">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:src="@mipmap/lxsany_icon" />
+
+
+                    <TextView
+                        android:id="@+id/per_tetdpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="0人"
+                        android:textColor="@color/hei333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/per_tetdpm1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/per_tetdpm"
+                        android:layout_marginLeft="52dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="连续3月>1000"
+                        android:textColor="@color/bai"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/dyph_bjn"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/per_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="5dp"
+                        android:text="l"
+                        android:textColor="@color/bai"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/xuxian1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:gravity="center|top"
+                        android:paddingTop="5dp"
+                        android:text="当月待发货与待收货订单"
+                        android:textColor="@color/bai"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:background="@mipmap/dyph_bjn1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/per_numtd"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="5dp"
+                        android:text="l"
+                        android:textColor="@color/bai"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/xuxian1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:gravity="center|top"
+                        android:paddingTop="5dp"
+                        android:text="当月待发货与待收货订单数(团队)"
+                        android:textColor="@color/bai"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

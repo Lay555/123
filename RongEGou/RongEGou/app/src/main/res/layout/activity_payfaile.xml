@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical"
+    tools:context=".Order.paysuc_fail.paysucc">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/payfail_dh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/chengg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="支付失败"
+        android:textColor="@color/hei"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/payf_tecz1"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/yuanjiaopay"
+        android:gravity="center"
+        android:text="重新支付"
+        android:textColor="@color/hei"
+        android:textSize="14sp" />
+
+</LinearLayout>

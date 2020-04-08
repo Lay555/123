@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical"
+    tools:context=".Order.orderdetails">
+
+    <RelativeLayout
+        android:id="@+id/ordde_lintop"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/bai">
+
+        <ImageView
+            android:id="@+id/ordde_imreturn"
+            android:layout_width="11dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/fh" />
+
+        <TextView
+            android:id="@+id/ordde_tetit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="订单详情"
+            android:textColor="@color/hei"
+            android:textSize="@dimen/tz15" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ordde_dizhi"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@mipmap/zu"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ordde_tezt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="已完成"
+                    android:textColor="@color/bai"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/ordde_imzt"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="30dp"
+                    android:src="@mipmap/pho" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ordde_teti1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="收货人"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/ordde_teti2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12sp"
+                    android:text="详细地址"
+                    android:textColor="@color/hei"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/ordde_teti3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12sp"
+                    android:textColor="@color/hei"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/sp_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="嵘e购"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ordde_recyc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="商品总额"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ordde_tealprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="运费"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ordde_teyufei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/danhei1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="实付款"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ordde_teyzonprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hon"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <TextView
+                android:id="@+id/ordde_tebot1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ordde_tebot2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ordde_recycydh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/ordde_tebot3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/ordde_tebot4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/danhei1" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/orderddatails_linbot"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/orderddatails_tecz1"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/biankuangqb"
+            android:gravity="center"
+            android:textColor="@color/hei"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/orderddatails_tecz2"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/biankuangqb"
+            android:gravity="center"
+            android:textColor="@color/hei"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yuanjiao_goods1"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/guige_imatp"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="9dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/guige_teprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_toRightOf="@id/guige_imatp"
+            android:gravity="center_vertical"
+            android:textColor="@color/hon"
+            android:textSize="@dimen/tz" />
+
+        <TextView
+            android:id="@+id/guige_teprice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/guige_teprice"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/guige_teprice"
+            android:gravity="center_vertical"
+            android:text="福利价"
+            android:textColor="@color/hon"
+            android:textSize="@dimen/tz" />
+
+        <ImageView
+            android:id="@+id/guige_imclose"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/close" />
+
+        <TextView
+            android:id="@+id/guige_tekucun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guige_teprice"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/guige_imatp"
+            android:gravity="center_vertical"
+            android:textColor="@color/hei92"
+            android:textSize="@dimen/tz" />
+
+        <TextView
+            android:id="@+id/guige_teguige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guige_tekucun"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/guige_imatp"
+            android:gravity="center_vertical"
+            android:textColor="@color/hei333"
+            android:textSize="@dimen/tz" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/guige_recyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="14dp"
+        android:background="@color/danhei1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="购买数量"
+            android:textColor="@color/hei333"
+            android:textSize="@dimen/tz" />
+
+        <LinearLayout
+            android:id="@+id/mcarada_lin2"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mcarada_imdcrease"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/biankuangqb1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/mcarada_edcount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/biankuangqb1"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:text="1"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/mcarada_increase"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/biankuangqb1"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#666666"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/danhei1" />
+
+    <TextView
+        android:id="@+id/addressit_teadd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/addressround2"
+        android:gravity="center"
+        android:text="立即下单"
+        android:textColor="@color/bai"
+        android:textSize="@dimen/tz15" />
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/xiadan_tets"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="下单成功!"
+        android:textColor="@color/hei"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/xiadan_teok"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/zhu"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/bai"
+        android:textSize="12dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginRight="100dp"
+        android:src="@mipmap/tuanduinoresult" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="暂无团队统计数据！"
+        android:textColor="@color/hei92"
+        android:textSize="17sp" />
+
+</LinearLayout>

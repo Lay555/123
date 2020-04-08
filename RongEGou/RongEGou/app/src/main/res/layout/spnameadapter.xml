@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/spname_teitname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+
+        android:background="@color/danhei1"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:minWidth="147dp"
+        android:minHeight="36dp"
+        android:paddingLeft="12dp"
+        android:textColor="@color/hei333"
+        android:textColorHint="@color/hei92"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/danhei1" />
+</LinearLayout>

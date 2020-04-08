@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/heif4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/flss_retop"
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <ImageView
+            android:id="@+id/flss_imreturn"
+            android:layout_width="30dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/fh" />
+
+        <EditText
+            android:id="@+id/flss_edit"
+            android:layout_width="240dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fenleitop"
+            android:hint="搜索关键词"
+
+            android:imeOptions="actionDone"
+            android:maxLength="50"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="#999999"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/flss_imss"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="53dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ss" />
+
+        <TextView
+            android:id="@+id/flss_tess"
+            android:layout_width="60dp"
+            android:layout_height="31dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/flss_edit"
+            android:background="@drawable/searchyuanjiao"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yuanjiao_search"
+        android:gravity="center_horizontal"
+        android:paddingTop="86dp"
+        android:text="当前无搜索内容"
+        android:textColor="@color/hei92"
+        android:textSize="@dimen/tz" />
+
+</LinearLayout>

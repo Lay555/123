@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical"
+    tools:context=".Order.order_shouhou">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/shouhou_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/shouhou" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <TextView
+                android:id="@+id/shouhou_tetop6"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/sp_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="嵘e购"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shouhou_imsp"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/shouhou_tename"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:gravity="center_vertical|bottom"
+                        android:singleLine="true"
+                        android:textColor="@color/hei333"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/shouhou_tegg"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/hei92"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/shouhou_teprice"
+                            android:layout_width="0dp"
+                            android:layout_height="39dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|top"
+                            android:singleLine="true"
+                            android:textColor="@color/hei333"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/shouhou_tenum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="39dp"
+                            android:layout_marginRight="12dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true"
+                            android:textColor="@color/hei92"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:text="商品总额"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ordde_tealprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:text="运费"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/ordde_teyufei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/ccc"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/danhei1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="问题描述"
+                android:textColor="@color/hei"
+                android:textColorHint="@color/ccc"
+                android:textSize="@dimen/tz" />
+
+            <RelativeLayout
+                android:id="@+id/heka_reinp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <EditText
+                    android:id="@+id/heka_edheka"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/roundbackground_qrdd"
+                    android:gravity="left"
+                    android:hint="请输入问题描述，300字以内"
+                    android:maxLength="200"
+                    android:padding="8dp"
+                    android:textColor="#666666"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/heka_tezi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:text="300"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/pinjia_imtp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingRight="7dp"
+                    android:src="@mipmap/add_image" />
+
+                <ImageView
+                    android:id="@+id/pinjia_imtp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingRight="7dp"
+                    android:src="@mipmap/add_image" />
+
+                <ImageView
+                    android:id="@+id/pinjia_imtp3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingRight="7dp"
+                    android:src="@mipmap/add_image" />
+
+                <ImageView
+                    android:id="@+id/pinjia_imtp4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingRight="7dp"
+                    android:src="@mipmap/add_image" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/addressit_teadd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/addressround3"
+        android:gravity="center"
+        android:text="申请售后"
+        android:textColor="@color/bai"
+        android:textSize="@dimen/tz" />
+
+</LinearLayout>

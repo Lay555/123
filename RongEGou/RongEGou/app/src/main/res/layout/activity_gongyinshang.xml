@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    tools:context=".Percenter.Gonyinshang.gongyinshang">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/gys_dh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gys_dh"
+        android:scaleType="fitXY"
+        android:src="@mipmap/chwgysh_image" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gys_dh"
+        android:scaleType="fitXY"
+        android:src="@mipmap/chwgysh_image" />
+
+    <TextView
+        android:id="@+id/gys_tebot"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/addressround4"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="提报产品"
+        android:textColor="@color/bai"
+        android:textSize="@dimen/tzd" />
+</RelativeLayout>

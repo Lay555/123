@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/xzfs_teth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bai"
+        android:gravity="center"
+        android:text="拍照"
+        android:textColor="@color/hei"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/danhei1" />
+
+    <TextView
+        android:id="@+id/xzfs_tesc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bai"
+        android:gravity="center"
+        android:text="相册"
+        android:textColor="@color/hei"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/xzfs_teqx"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bai"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/hei"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

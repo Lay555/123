@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical"
+    tools:context=".Percenter.Gonyinshang.xiaoshoue">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/xsefr_xsezs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/xsefr_indicator4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/addressround5" />
+
+
+    <baseTools.Cannotscroll_viewpager
+        android:id="@+id/xsefr_vpger"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

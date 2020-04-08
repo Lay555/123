@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/banbengx_bj"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bbgx_tebb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="176dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:text="V1.0.1"
+            android:textColor="#F4501E"
+            android:textSize="@dimen/tz" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="34dp"
+            android:text="更新内容:"
+            android:textColor="@color/hei"
+            android:textSize="@dimen/tz" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/bbgx_tetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="34dp"
+                android:paddingRight="34dp"
+                android:text="更新内容:"
+                android:textColor="@color/hei"
+                android:textSize="@dimen/tz12" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/bbgx_tegx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/addressround1"
+            android:gravity="center"
+            android:text="立即更新"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/tz" />
+
+
+        <TextView
+            android:id="@+id/bbgx_teflue"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="9dp"
+            android:gravity="center"
+            android:text="以后再说"
+            android:textColor="@color/hei"
+            android:textSize="@dimen/tz" />
+
+    </LinearLayout>
+</LinearLayout>

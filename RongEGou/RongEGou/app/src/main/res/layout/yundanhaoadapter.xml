@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/bai"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ordde_tetit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:text="0123456"
+        android:textColor="@color/hei92"
+        android:textColorHint="@color/ccc"
+        android:textSize="@dimen/tz" />
+
+    <TextView
+        android:id="@+id/ordde_tecopy"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/biankuangqb"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="复制"
+        android:textColor="@color/hei"
+        android:textColorHint="@color/ccc"
+        android:textSize="11sp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/ordde_tego"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/biankuangqb"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="查看物流"
+        android:textColor="@color/hei"
+        android:textColorHint="@color/ccc"
+        android:textSize="11sp" />
+
+
+</LinearLayout>

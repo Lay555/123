@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="分享到"
+        android:textColor="@color/hei333"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/shareui_tepy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/sns_icon_22"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="分享好友"
+            android:textColor="@color/hei333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/shareui_tepyq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/sns_icon_23"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="分享朋友圈"
+            android:textColor="@color/hei333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/shareui_tehb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/imgtp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="保存图片"
+            android:textColor="@color/hei333"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shareui_tecancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="#f0f4f5"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/hei333"
+        android:textSize="17sp" />
+</LinearLayout>

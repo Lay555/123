@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/addyhkssq_tetit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="选择省市区"
+            android:textColor="@color/hei92"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/addyhkssq_imclose"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="12dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:src="@mipmap/close" />
+
+    </android.support.v7.widget.ContentFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addyhkssq_teshen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="middle"
+            android:gravity="center_vertical"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="请选择"
+            android:textColor="@color/select_te1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/addyhkssq_teshi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="120dp"
+            android:singleLine="true"
+            android:text="请选择"
+            android:textColor="@color/select_te1"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/addyhkssq_tequ"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="120dp"
+            android:singleLine="true"
+            android:text="请选择"
+            android:textColor="@color/select_te1"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/hei92" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addyhkssq_recyc"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addyhkssq_recyc1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addyhkssq_recyc2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+</LinearLayout>

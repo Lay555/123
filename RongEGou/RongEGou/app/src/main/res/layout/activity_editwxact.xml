@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    tools:context=".Percenter.Perziliao.editwxact">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/dh_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/xiugai_edname"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="17dp"
+        android:background="@color/bai"
+        android:hint="请输入新昵称"
+        android:maxLength="16"
+        android:paddingLeft="16dp"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/addaddte_teadd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/addressround2"
+        android:gravity="center"
+        android:maxLength="11"
+        android:singleLine="true"
+        android:text="确认修改"
+        android:textColor="@color/bai"
+        android:textSize="@dimen/tz15" />
+
+</LinearLayout>

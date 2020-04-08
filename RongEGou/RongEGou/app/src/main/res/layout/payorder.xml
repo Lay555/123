@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fk_linzfb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bai"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:padding="5dp"
+            android:src="@mipmap/zfbp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="支付宝支付"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/danhei1" />
+
+    <LinearLayout
+        android:id="@+id/fk_linwx"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bai"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:padding="5dp"
+            android:src="@mipmap/wxp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="微 信 支 付"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/xzfs_teqx"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/bai"
+        android:gravity="center"
+        android:text="暂不支付"
+        android:textColor="@color/hei"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

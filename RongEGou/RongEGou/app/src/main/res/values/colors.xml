@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="zhu">#da0000</color>
+    <color name="hei">#333333</color>
+    <color name="hei333">#333333</color>
+    <color name="h68">#686868</color>
+    <color name="bai">#ffffff</color>
+    <color name="danhei">#dddddd</color>
+    <color name="danhei1">#f2f2f2</color>
+    <color name="hon">#F4501e</color>
+    <color name="heif4">#F4f4f4</color>
+    <color name="hei92">#929292</color>
+    <color name="ccc">#cccccc</color>
+    <color name="heif9">#f9f9f9</color>
+    <color name="hon1">#f4501e</color>
+</resources>

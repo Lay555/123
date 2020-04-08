@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/hpit_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/hp_view1"
+                android:layout_width="13dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/hp_view11"
+                android:layout_width="7dp"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/hpit_ima"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="13dp"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/hp_view21"
+                android:layout_width="7dp"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/hp_view2"
+                android:layout_width="13dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hpit_tetxt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical|top"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/hei333"
+            android:textSize="@dimen/tz" />
+
+        <TextView
+            android:id="@+id/hpit_teprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4dp"
+            android:paddingLeft="14dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/hon"
+            android:textSize="@dimen/tz" />
+    </LinearLayout>
+
+</LinearLayout>

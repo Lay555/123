@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/danhei1"
+    android:orientation="vertical"
+    tools:context=".LoginAct.RegisterAct">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="114dp"
+                android:layout_height="114dp"
+                android:layout_marginLeft="123dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="37dp"
+                android:src="@mipmap/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="23dp"
+                    android:src="@mipmap/nc" />
+
+                <EditText
+                    android:id="@+id/login_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="请输入昵称"
+                    android:inputType="text"
+                    android:maxLength="11"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/danhei" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="23dp"
+                    android:src="@mipmap/pho" />
+
+                <EditText
+                    android:id="@+id/login_pho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="请输入手机号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/danhei" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40.5dp"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@mipmap/yzm" />
+
+                <EditText
+                    android:id="@+id/login_yzm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/danhei1"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:minWidth="78dp"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+
+                <com.doudui.rongegou.LoginAct.TimerTextView
+                    android:id="@+id/loginp_tegetyzm"
+                    android:layout_width="95dp"
+                    android:layout_height="40.5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/biankuangqb"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="198dp"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/danhei" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="23dp"
+                    android:src="@mipmap/sr" />
+
+                <EditText
+                    android:id="@+id/login_sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="1970"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/danhei1"
+                    android:paddingTop="2dp"
+                    android:text="/"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+                <EditText
+                    android:id="@+id/login_sr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/danhei1"
+                    android:paddingTop="2dp"
+                    android:text="/"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+                <EditText
+                    android:id="@+id/login_sr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/danhei" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="23dp"
+                    android:src="@mipmap/tjr" />
+
+                <EditText
+                    android:id="@+id/login_tjr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/danhei1"
+                    android:hint="请输入推荐人社长号"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/hei"
+                    android:textSize="@dimen/tz" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/danhei" />
+
+            <TextView
+                android:id="@+id/loginp_tezc"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/dlyj"
+                android:gravity="center"
+                android:text="立即注册"
+                android:textColor="@color/bai"
+                android:textSize="@dimen/tz" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

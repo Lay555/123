@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bai"
+    android:orientation="vertical">
+
+    <baseTools.DaoHang_top
+        android:id="@+id/xiadan_dh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/xiadan_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/xiadan_linbh"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/xiadan_edbh"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入产品编号或者名字"
+                    android:maxLines="1"
+                    android:minWidth="147dp"
+                    android:paddingLeft="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/hei"
+                    android:textColorHint="@color/hei92"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/xiadan_tebh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="12dp"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:text="产品详情"
+                    android:textColor="@color/hei"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="@color/heif4" />
+
+                    <LinearLayout
+                        android:id="@+id/xiadan_regg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/xiadan_spname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="3dp"
+                            android:background="@color/bai"
+                            android:gravity="center_vertical"
+                            android:minWidth="147dp"
+                            android:minHeight="40dp"
+                            android:paddingLeft="12dp"
+                            android:textColor="@color/hei"
+                            android:textColorHint="@color/hei92"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/xiadan_recycguige"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bai" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:gravity="center_vertical"
+                                android:text="购买数量"
+                                android:textColor="@color/hei"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/xiadantekucun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="（库存0）"
+                                android:textColor="@color/hei"
+                                android:textSize="12sp" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0.5dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/xiadan_jian"
+                                android:layout_width="31dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/biankuangqb"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/ccc"
+                                android:textSize="24sp" />
+
+                            <TextView
+                                android:id="@+id/xiadan_num"
+                                android:layout_width="31dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/biankuangqb"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/hei"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/xiadan_jia"
+                                android:layout_width="31dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/biankuangqb"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/h68"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="12dp"
+                            android:background="@color/danhei1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0.5dp"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/xiadan_tedanprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="12dp"
+                                android:gravity="center_vertical"
+                                android:text="销售价:￥53.1"
+                                android:textColor="@color/hei"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/xiadan_tefuli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="12dp"
+                                android:gravity="center_vertical"
+                                android:text="（库存112）"
+                                android:textColor="@color/hei"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/xiadan_kb"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="@color/heif4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="47dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="快递费"
+                            android:textColor="@color/hei"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/xiadan_kdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/hei"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:background="@color/heif4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="47dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="订单总价"
+                            android:textColor="@color/hei"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/xiadan_ddprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/hon"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="@color/heif4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/xiadan_edshr"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="请输入收货人姓名"
+                            android:maxLength="11"
+                            android:minWidth="147dp"
+                            android:paddingLeft="12dp"
+                            android:textColor="@color/hei"
+                            android:textColorHint="@color/hei92"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/xiadan_teshr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:gravity="center"
+                            android:paddingLeft="12dp"
+                            android:text="选择地址"
+                            android:textColor="@color/hei333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/heif4" />
+
+                    <EditText
+                        android:id="@+id/xiadan_edpho"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:hint="请输入电话号码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:minWidth="147dp"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/hei"
+                        android:textColorHint="@color/hei92"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/heif4" />
+
+                    <EditText
+                        android:id="@+id/xiadan_edsfz"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:digits="0123456789Xx"
+                        android:hint="请输入身份证号码(选填)"
+                        android:maxLength="25"
+                        android:minWidth="147dp"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/hei"
+                        android:textColorHint="@color/hei92"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/xiadan_linssq"
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/xiadan_tessq"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:minWidth="147dp"
+                            android:paddingLeft="12dp"
+                            android:text="所在地区"
+                            android:textColor="@color/hei"
+                            android:textColorHint="@color/hei92"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/xiadan_imssq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="12dp"
+                            android:src="@mipmap/fhy" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="47dp"
+                            android:layout_marginStart="12dp"
+                            android:gravity="center_vertical"
+                            android:text="详细地址："
+                            android:textColor="@color/hon"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/xiadan_edaddress"
+                            android:layout_width="0dp"
+                            android:layout_height="72dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginRight="47dp"
+                            android:layout_weight="1"
+                            android:background="@color/bai"
+                            android:gravity="center_vertical|top"
+                            android:hint="如道路、门牌号、小区、楼栋号、单元室等"
+                            android:lineSpacingExtra="5dp"
+                            android:textColor="@color/hei"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="@color/heif4" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:minWidth="147dp"
+                        android:paddingLeft="12dp"
+                        android:text="留言"
+                        android:textColor="@color/hei"
+                        android:textColorHint="@color/hei92"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/xiadan_edliuyan"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="47dp"
+                        android:layout_weight="1"
+                        android:background="@color/bai"
+                        android:gravity="center_vertical|top"
+                        android:hint="请在此处添加描述"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/hei"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/xiadan_recyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@color/danhei1"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/heif4">
+
+        <TextView
+            android:id="@+id/addaddte_teadd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/addressround2"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/bai"
+            android:textSize="@dimen/tz15" />
+    </RelativeLayout>
+</LinearLayout>

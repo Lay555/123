@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginAct.RegisterNoPass">
+
+    <ImageView
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginBottom="46dp"
+        android:src="@mipmap/npass" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="很抱歉，您的信息审核未通过"
+        android:textColor="@color/hei92"
+        android:textSize="@dimen/tzd" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="21dp"
+        android:gravity="center"
+        android:text="请修改后重修提交信息"
+        android:textColor="@color/hei92"
+        android:textSize="@dimen/tz" />
+
+    <TextView
+        android:id="@+id/loginp_te"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+
+        android:layout_marginLeft="79dp"
+        android:layout_marginRight="79dp"
+        android:background="@mipmap/yj1"
+        android:gravity="center"
+        android:text="修改信息"
+        android:textColor="@color/bai"
+        android:textSize="@dimen/tz" />
+
+
+</LinearLayout>
