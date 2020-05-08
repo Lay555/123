@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:name="baseTools.App"
@@ -25,6 +27,21 @@
         <activity android:name=".HomePage.phb.paihangbang" />
         <activity android:name=".Order.neworder.orderyusou" />
         <activity android:name=".Percenter.testWeb" />
+        <!-- android 7.0以上安装apk所需要的权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.doudui.rongegou.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+
+            <!--元数据  -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                />
+        </provider>
+
         <activity
             android:name=".GuidActivity"
             android:screenOrientation="portrait">

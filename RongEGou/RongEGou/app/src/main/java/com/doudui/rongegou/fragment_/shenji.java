@@ -25,6 +25,7 @@ import butterknife.Unbinder;
 
 public class shenji extends DialogFragment {
     View view;
+    View.OnClickListener onClickListener;
     int wxx = 0;
     @BindView(R.id.bbgx_tebb)
     TextView bbgxTebb;
@@ -37,6 +38,16 @@ public class shenji extends DialogFragment {
     Unbinder unbinder;
 
     String url = "", bbh = "", txt = "", type = "";
+
+    public shenji setShejiClick(View.OnClickListener onClickListener){
+        this.onClickListener=onClickListener;
+        return this;
+    }
+    public void setPro(String pro){
+        if (bbgxTegx!=null){
+            bbgxTegx.setText(pro);
+        }
+    }
 
     @Nullable
     @Override
@@ -66,18 +77,23 @@ public class shenji extends DialogFragment {
                 dismiss();
             }
         });
+//        更新
         bbgxTegx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse(url);
+                if (onClickListener!=null){
+                    onClickListener.onClick(view);
+                }
+               /* Uri uri = Uri.parse(url);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
     }
 
     private void setdata() {
         Bundle bundle = getArguments();
+        //bbh版本完全号码 txt更新说明
         bbgxTebb.setText(bundle.getString("bbh"));
         bbgxTetxt.setText(bundle.getString("txt"));
         type = bundle.getString("type");

@@ -1,15 +1,23 @@
 package com.doudui.rongegou;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
@@ -29,6 +37,8 @@ import com.doudui.rongegou.fragment_.APOrder;
 import com.doudui.rongegou.fragment_.HomePage;
 import com.doudui.rongegou.fragment_.Personal;
 import com.doudui.rongegou.fragment_.shenji;
+import com.github.dfqin.grantor.PermissionListener;
+import com.github.dfqin.grantor.PermissionsUtil;
 import com.gyf.barlibrary.ImmersionBar;
 import com.tencent.android.tpush.XGPushClickedResult;
 import com.tencent.android.tpush.XGPushManager;
@@ -40,7 +50,10 @@ import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,6 +103,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     LinearLayout mainactWd;
 
     Unbinder unbinder;
+    public static File file;
 
     ImageView ivCurrent;
     TextView tvCurrent;
@@ -380,6 +394,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                         JSONArray jsa = jsonObject.getJSONArray("Value");
                         JSONObject jso = jsa.getJSONObject(0);
                         int version = jso.getInt("versioncode");
+                        final String url = jso.getString("url");
                         System.out.println(jsonObject + "");
                         if (version > getVersion1())
                             if (!shenji.isAdded()) {
@@ -390,11 +405,15 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                                 bundle.putString("txt", jso.getString("comment"));
                                 bundle.putString("type", jso.getString("type"));
                                 shenji.setArguments(bundle);
-
-                                shenji.show(getSupportFragmentManager(), "bbgx");
+//                                shenji.show(getSupportFragmentManager(), "bbgx");
+//                                升级
+                                shenji.setShejiClick(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        quanxian(url);
+                                    }
+                                }).show(getSupportFragmentManager(), "");
                             }
-
-
                     }
 
                 } catch (JSONException e) {
@@ -409,6 +428,123 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             }
         });
+    }
+
+    public void quanxian(final String url) {
+        String qx = Manifest.permission.READ_EXTERNAL_STORAGE;
+        boolean hanpermissions = PermissionsUtil.hasPermission(MainActivity.this, qx);
+        if (hanpermissions) {
+            setDownLoad(url);
+        } else {
+            PermissionsUtil.requestPermission(MainActivity.this, new PermissionListener() {
+                //权限被授权
+                @Override
+                public void permissionGranted(@NonNull String[] permission) {
+                    setDownLoad(url);
+                }
+
+                //权限被拒绝
+                @Override
+                public void permissionDenied(@NonNull String[] permission) {
+                    toaste_ut("你没有开启存储权限，无法更新下载");
+
+                }
+            }, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        }
+
+    }
+
+    @SuppressLint("SdCardPath")
+    public void setDownLoad(String url) {
+        RequestParams params = new RequestParams(url);
+        params.setAutoRename(true);//断点下载
+        params.setSaveFilePath("/mnt/sdcard/demo.apk");
+        x.http().get(params, new org.xutils.common.Callback.ProgressCallback<File>() {
+            @Override
+            public void onSuccess(File result) {
+               /* if (progressDialog != null && progressDialog.isShowing()) {
+                    progressDialog.dismiss();
+                }*/
+                toaste_ut("下载完成开始安装");
+                if (Build.VERSION.SDK_INT >= 24) {// 判读版本是否在7.0以上
+                    file = new File(getSDPath(MainActivity.this), "demo.apk");
+                    Uri apkUri = FileProvider.getUriForFile(MainActivity.this, "com.doudui.rongegou.fileprovider", file);// 在AndroidManifest中的android:authorities值
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);//添加这一句表示对目标应用临时授权该Uri所代表的文件
+                    intent.setDataAndType(apkUri, "application/vnd.android.package-archive");
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.setDataAndType(Uri.fromFile(new File(Environment
+                                    .getExternalStorageDirectory(), "demo.apk")),
+                            "application/vnd.android.package-archive");
+                    startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                toaste_ut("提示更新失败");
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+
+            @Override
+            public void onWaiting() {
+
+            }
+
+            @Override
+            public void onStarted() {
+                /*System.out.println("开始下载");
+                progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);//设置为水平进行条
+                progressDialog.setMessage("正在下载中...");
+                progressDialog.setProgress(0);
+                progressDialog.show();
+*/
+            }
+
+            @Override
+            public void onLoading(long arg0, long arg1, boolean isDownloading) {
+              /*  progressDialog.setMax((int) arg0);
+                progressDialog.setProgress((int) arg1);
+                System.out.println( "1234");*/
+                shenji.setPro((arg1 * 100 / arg0) + "%");
+            }
+        });
+    }
+
+
+    protected void toaste_ut(String str) {
+        Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * 获取路径
+     *
+     * @param context
+     * @return 路径
+     */
+    public static String getSDPath(Context context) {
+        boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);// 判断sd卡是否存在
+        if (sdCardExist) {
+            return Environment.getExternalStorageDirectory().toString();// 获取根目录
+        } else {
+            return context.getCacheDir().getAbsolutePath(); // 获取内置内存卡目录
+        }
     }
 
     public int getVersion1() {
