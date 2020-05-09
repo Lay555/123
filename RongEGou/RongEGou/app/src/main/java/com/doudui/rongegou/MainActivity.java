@@ -74,7 +74,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener, quyussq.setSSq {
-//2020.5.9
+//haha
     @BindView(R.id.mainact_vp)
     Cannotscroll_viewpager mainactVp;
     @BindView(R.id.mainact_ivsy)
