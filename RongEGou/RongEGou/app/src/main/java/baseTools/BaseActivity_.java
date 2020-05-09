@@ -116,8 +116,9 @@ public abstract class BaseActivity_ extends AppCompatActivity {
      * @return 根据key获取值
      */
     protected String getSharePre(String key, Context context) {
-        if (preferences==null)
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if (preferences==null){
+            preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        }
         return preferences.getString(key, "0");
     }
 

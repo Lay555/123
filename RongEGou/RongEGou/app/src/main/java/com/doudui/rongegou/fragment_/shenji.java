@@ -62,7 +62,6 @@ public class shenji extends DialogFragment {
         unbinder = ButterKnife.bind(this, view);
         DisplayMetrics dm = getActivity().getResources().getDisplayMetrics();
         wxx = dm.widthPixels;
-        Bundle b = getArguments();
         setdata();
         setviewlisten();
 
@@ -84,9 +83,6 @@ public class shenji extends DialogFragment {
                 if (onClickListener!=null){
                     onClickListener.onClick(view);
                 }
-               /* Uri uri = Uri.parse(url);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);*/
             }
         });
     }
@@ -111,7 +107,9 @@ public class shenji extends DialogFragment {
                         home.addCategory(Intent.CATEGORY_HOME);
                         startActivity(home);
 
-                    } else dismiss();
+                    } else {
+                        dismiss();
+                    }
 
                     return true;
                 }
@@ -120,8 +118,9 @@ public class shenji extends DialogFragment {
         });
     }
 
-    public interface mappos {
-        void mappos();
+    @FunctionalInterface
+    public interface mappo {
+        void mappo();
     }
 
     @Override
@@ -133,9 +132,9 @@ public class shenji extends DialogFragment {
     public void onStart() {
         super.onStart();
         DisplayMetrics dm = new DisplayMetrics();
-        int w = dm.widthPixels;
+        int height=-2;
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-        getDialog().getWindow().setLayout(dm.widthPixels, -2);
+        getDialog().getWindow().setLayout(dm.widthPixels, height);
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 

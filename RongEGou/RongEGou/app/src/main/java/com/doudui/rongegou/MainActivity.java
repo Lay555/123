@@ -19,6 +19,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.FileProvider;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -395,7 +396,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                         JSONObject jso = jsa.getJSONObject(0);
                         int version = jso.getInt("versioncode");
                         final String url = jso.getString("url");
-                        System.out.println(jsonObject + "");
+//                        System.out.println(jsonObject + "");
+                        Log.v("",jsonObject+"");
                         if (version > getVersion1())
                             if (!shenji.isAdded()) {
 //                            String url="",bbh="", txt = "",type=2;

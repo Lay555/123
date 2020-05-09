@@ -20,6 +20,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -67,8 +68,6 @@ import retrofit2.Response;
 
 public class GoodsDetails extends BaseActivity_ {
 
-
-    //12
     @BindView(R.id.gdt_imfh)
     ImageView gdtImfh;
     @BindView(R.id.gdt_imfx)
@@ -108,9 +107,7 @@ public class GoodsDetails extends BaseActivity_ {
     private List<ADInfo> infos = new ArrayList<ADInfo>();
     CycleViewPager cycleViewPager;
     private String[] imageUrls = {"", "", ""};// 轮播图test
-    private String[] url_web;// 轮播图要跳转的网页
-    private String[] url_webtit;// 轮播图要跳转的网页的标题
-    private String[] goodsid_bin;// 轮播图要跳转的网页的标题
+
 
     String haibaourl = "";
     Bitmap bt = null;//保存图片到本地
@@ -121,6 +118,10 @@ public class GoodsDetails extends BaseActivity_ {
     maijiaxiuada ada;
     String maijiaxiu = "";
     List<majiaxiudata> list = new ArrayList<>();
+
+    public GoodsDetails() {
+
+    }
 
     @Override
     protected void AddView() {
@@ -239,19 +240,23 @@ public class GoodsDetails extends BaseActivity_ {
             case R.id.gdt_lingg:
                 break;
             case R.id.addressit_teadd:
-                if (!TextUtils.isEmpty(goods_price)) {
-                    if (!guigefrag.isAdded()) {
-                        Bundle bundle = new Bundle();
-                        bundle.putString("gdid", goodsid);
-                        bundle.putString("gdpic", imageUrls[0]);
-                        bundle.putString("gprice", goods_price);
-                        bundle.putString("goodsname", goodsname);
-                        bundle.putString("isyugou", isyugou);
-                        guigefrag.setArguments(bundle);
-                        guigefrag.show(getSupportFragmentManager(), "xx");
-                    }
-                }
+                checkxiadan();
                 break;
+        }
+    }
+
+    private void checkxiadan() {
+        if (!TextUtils.isEmpty(goods_price)) {
+            if (!guigefrag.isAdded()) {
+                Bundle bundle = new Bundle();
+                bundle.putString("gdid", goodsid);
+                bundle.putString("gdpic", imageUrls[0]);
+                bundle.putString("gprice", goods_price);
+                bundle.putString("goodsname", goodsname);
+                bundle.putString("isyugou", isyugou);
+                guigefrag.setArguments(bundle);
+                guigefrag.show(getSupportFragmentManager(), "xx");
+            }
         }
     }
 
@@ -281,7 +286,7 @@ public class GoodsDetails extends BaseActivity_ {
                     return;
                 try {
                     JSONObject jsonObject = new JSONObject(response.body().string());
-                    System.out.println(jsonObject);
+                    Log.v("", jsonObject + "");
                     if (jsonObject.getString("Status").equals("1")) {
                         JSONArray jsa_ = jsonObject.getJSONArray("Value");
                         JSONObject jso = jsa_.getJSONObject(0);
@@ -443,8 +448,7 @@ public class GoodsDetails extends BaseActivity_ {
         @Override
         public void onImageClick(ADInfo info, int position, View imageView) {
             if (cycleViewPager.isCycle()) {
-                int pos = position - 1;
-
+//                int pos = position - 1;
             }
 
         }
@@ -465,14 +469,13 @@ public class GoodsDetails extends BaseActivity_ {
                     sharesdkunew1.setArguments(bundle);
                     sharesdkunew1.show(getSupportFragmentManager(), "xx");
                 }
-            } else if (data != null) {
-                if (data.getMsg().equals(configParams.share2)) {
-                    bt = (Bitmap) data.getT();
-                    getpermission();
-                    if (sharesdkunew1.isAdded()) {
-                        sharesdkunew1.dismiss();
-                    }
+            } else if (data.getMsg().equals(configParams.share2)) {
+                bt = (Bitmap) data.getT();
+                getpermission();
+                if (sharesdkunew1.isAdded()) {
+                    sharesdkunew1.dismiss();
                 }
+
             }
         }
     }

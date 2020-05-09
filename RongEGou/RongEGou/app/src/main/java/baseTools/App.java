@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.android.tpush.XGIOperateCallback;
@@ -41,26 +42,17 @@ public class App extends MultiDexApplication {
         }
         LeakCanary.install(this);
 
-        String phone_chan = Build.BRAND.toLowerCase();
-        XGPushConfig.enableOtherPush(this, true);
-//        if (phone_chan.contains("meizu")) {
 
+        XGPushConfig.enableOtherPush(this, true);
         XGPushConfig.setMzPushAppId(this, "117932");
         XGPushConfig.setMzPushAppKey(this, "0cab40fed973464696c1a1a9672d3a9c");
-//        } else if (phone_chan.contains("xiaomi")) {
-//            qd = "xiaomi";
-//            XGPushConfig.setMiPushAppId(getApplicationContext(), "2882303761517924655");
-//            XGPushConfig.setMiPushAppKey(getApplicationContext(), "5301792418655");
-//        } else if (phone_chan.contains("huawei")) {
-//            qd = "huawei";
-//            XGPushConfig.setHuaweiDebug(true);
-//        }
+
 
         XGPushConfig.enableDebug(this, false);
         XGPushManager.registerPush(this, new XGIOperateCallback() {
             @Override
             public void onSuccess(Object data, int flag) {
-                System.out.println("注册成功，设备token为：" + data);
+                Log.v("注册成功，设备token为",data+"");
                 editor = preferences.edit();
                 editor.putString("device_token", data.toString());
                 editor.apply();
@@ -74,6 +66,7 @@ public class App extends MultiDexApplication {
 
             @Override
             public void onFail(Object data, int errCode, String msg) {
+
             }
         });
 
