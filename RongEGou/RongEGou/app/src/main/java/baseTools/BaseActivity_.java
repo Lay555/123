@@ -35,7 +35,8 @@ public abstract class BaseActivity_ extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         jdt = new progressbar_();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        将显示改成竖屏显示
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(getLayout());
 //        DaoHangLan(this);
         ImmersionBar.with(this).fitsSystemWindows(true).statusBarColor(R.color.bai).statusBarDarkFont(true, 0.0f).init();

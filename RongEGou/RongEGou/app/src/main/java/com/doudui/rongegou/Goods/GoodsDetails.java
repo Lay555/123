@@ -67,6 +67,8 @@ import retrofit2.Response;
 
 public class GoodsDetails extends BaseActivity_ {
 
+
+    //12
     @BindView(R.id.gdt_imfh)
     ImageView gdtImfh;
     @BindView(R.id.gdt_imfx)

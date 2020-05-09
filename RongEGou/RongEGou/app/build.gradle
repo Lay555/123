@@ -39,8 +39,8 @@ android {
         applicationId "com.doudui.rongegou"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 21
-        versionName "2.6.8"
+        versionCode 22
+        versionName "2.6.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
@@ -138,4 +138,6 @@ dependencies {
     implementation 'com.umeng.umsdk:analytics:7.5.4'
     implementation 'com.umeng.umsdk:common:1.5.4'
     implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+//    xutilis
+    implementation 'org.xutils:xutils:3.8.8'
 }

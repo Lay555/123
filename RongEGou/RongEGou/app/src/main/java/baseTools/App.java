@@ -17,6 +17,8 @@ import com.tencent.smtt.sdk.QbSdk;
 import com.umeng.commonsdk.UMConfigure;
 
 import org.greenrobot.eventbus.EventBus;
+import org.xutils.BuildConfig;
+import org.xutils.x;
 
 public class App extends MultiDexApplication {
     SharedPreferences preferences;
@@ -27,6 +29,9 @@ public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        //        xutils初始化
+        x.Ext.init(this);
+        x.Ext.setDebug(BuildConfig.DEBUG); //是否输出debug日志，开启debug会影响性能。
         UMConfigure.init(this, UMConfigure.DEVICE_TYPE_PHONE, "");
         MultiDex.install(this);
         initX5WebView();
