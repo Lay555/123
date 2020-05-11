@@ -580,9 +580,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             e.printStackTrace();
         }
 
-
-        RequestBody requestBody =
-                RequestBody.create(MediaType.parse("application/json; charset=utf-8"),
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"),
                         jsonObject.toString());
         Call<ResponseBody> call = serivce.getData(requestBody);
         call.enqueue(new Callback<ResponseBody>() {

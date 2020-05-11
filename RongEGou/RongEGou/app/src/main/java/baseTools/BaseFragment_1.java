@@ -31,7 +31,7 @@ public abstract class BaseFragment_1 extends Fragment {
     public  progressbar_ jdt;
 
     View view;
-
+//
 
     @Nullable
     @Override
